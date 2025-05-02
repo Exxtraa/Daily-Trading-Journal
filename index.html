@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Entry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- PDF Make library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="journal-box" id="journal-content">
+            <!-- Header Section -->
+            <div class="header-section">
+                <div class="day-section">
+                    <label>DAY:</label>
+                    <input type="text" class="day-input">
+                </div>
+                <div class="summary-section">
+                    <label>Summary/Plan:</label>
+                    <input type="text" class="summary-input">
+                </div>
+                <div class="date-section">
+                    <label>Date:</label>
+                    <input type="date" class="date-input">
+                </div>
+            </div>
+
+            <!-- Morning Checklist -->
+            <div class="checklist-section">
+                <h3>Morning Checklist:</h3>
+                <div class="checklist-items">
+                    <label><input type="checkbox"> Calendar</label>
+                    <label><input type="checkbox"> D.Brief</label>
+                    <label><input type="checkbox"> Key Levels</label>
+                </div>
+            </div>
+
+            <!-- Entry Criteria -->
+            <div class="criteria-section">
+                <h3>ENTRY CRITERIA:</h3>
+                <div class="criteria-items">
+                    <label><input type="checkbox"> CLEAR LTP/GTFO:</label>
+                    <textarea rows="2" placeholder="2 Line Space"></textarea>
+
+                    <label><input type="checkbox"> ⅓ RAID:</label>
+                    <textarea rows="2" placeholder="2 Line Space"></textarea>
+
+                    <label><input type="checkbox"> PD ARR POI:</label>
+                    <textarea rows="2" placeholder="2 Line"></textarea>
+
+                    <label><input type="checkbox"> Confirmation & Execution:</label>
+                    <textarea rows="2" placeholder="2 Line"></textarea>
+
+                    <label><input type="checkbox"> Valid Test/SL:</label>
+                    <textarea rows="1" placeholder="1 Line"></textarea>
+
+                    <label><input type="checkbox"> 'Kill Zone' Window:</label>
+                    <textarea rows="1" placeholder="1 Line"></textarea>
+                </div>
+            </div>
+
+            <!-- Exit Criteria -->
+            <div class="exit-section">
+                <h3>EXIT CRITERIA:</h3>
+                <div class="exit-items">
+                    <label><input type="checkbox"> Opposing $ / Time Based Exit</label>
+                    
+                    <div class="exit-reason">
+                        <label>WHY SL:</label>
+                        <textarea rows="3" placeholder="3 Line Space"></textarea>
+                    </div>
+
+                    <div class="exit-reason">
+                        <label>WHY TP:</label>
+                        <textarea rows="2" placeholder="2 Line Space"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <h3>RESULTS:</h3>
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>P/S</th>
+                            <th>R/R</th>
+                            <th>Realized R/R</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>T-1</td>
+                            <td><input type="text" class="table-input"></td>
+                            <td><input type="text" class="table-input"></td>
+                            <td><input type="text" class="table-input"></td>
+                        </tr>
+                        <tr>
+                            <td>T-2</td>
+                            <td><input type="text" class="table-input"></td>
+                            <td><input type="text" class="table-input"></td>
+                            <td><input type="text" class="table-input"></td>
+                        </tr>
+                        <tr>
+                            <td>T-3</td>
+                            <td><input type="text" class="table-input"></td>
+                            <td><input type="text" class="table-input"></td>
+                            <td><input type="text" class="table-input"></td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>Total P&L</td>
+                            <td colspan="3"><input type="text" class="table-input total-input"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Conclusions Section -->
+            <div class="conclusions-section">
+                <h3>Conclusions:</h3>
+                <div class="conclusion-items">
+                    <label>Mistakes I Made:</label>
+                    <textarea rows="3" placeholder="3 Line"></textarea>
+
+                    <label>Well Did:</label>
+                    <textarea rows="3" placeholder="3 Line"></textarea>
+
+                    <label>Improvement:</label>
+                    <textarea rows="3" placeholder="3 Line"></textarea>
+                </div>
+            </div>
+
+            <!-- Export Button Section -->
+            <div class="button-section">
+                <a href="https://github.com/Exxtraa" target="_blank" class="github-link">GitHub</a>
+                <button id="export-pdf" class="export-button">Export to PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
